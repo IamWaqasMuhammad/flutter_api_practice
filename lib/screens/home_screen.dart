@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_api_practice/models/post_model.dart';
 import 'package:http/http.dart' as http;
 
+// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
