@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_api_practice/models/post_model.dart';
+import 'package:flutter_api_practice/screens/user_screen.dart';
 import 'package:http/http.dart' as http;
 
 // ignore: must_be_immutable
@@ -33,6 +34,17 @@ class HomeScreen extends StatelessWidget {
         title: Text('Home Screen'),
         centerTitle: true,
         backgroundColor: Colors.blue,
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: ((context) => UserScreen())),
+              );
+            },
+            child: Icon(Icons.forward, color: Colors.white),
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -55,10 +67,15 @@ class HomeScreen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Title: ',style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                                Text(
+                                  'Title: ',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                                 Text(postList[index].title),
-                                SizedBox(height: 10,),
+                                SizedBox(height: 10),
                                 Text(
                                   'Description: ',
                                   style: TextStyle(
