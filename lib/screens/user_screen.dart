@@ -5,6 +5,7 @@ import 'package:flutter_api_practice/models/user_model.dart';
 import 'package:flutter_api_practice/screens/comments_screen.dart';
 import 'package:http/http.dart' as http;
 
+// ignore: must_be_immutable
 class UserScreen extends StatelessWidget {
   UserScreen({super.key});
 
