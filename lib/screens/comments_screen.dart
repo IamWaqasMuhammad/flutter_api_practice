@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_api_practice/models/comments_model.dart';
 import 'package:http/http.dart' as http;
 
+// ignore: must_be_immutable
 class CommentsScreen extends StatelessWidget {
   CommentsScreen({super.key});
 
