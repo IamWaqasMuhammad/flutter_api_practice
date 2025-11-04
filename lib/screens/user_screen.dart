@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_api_practice/models/user_model.dart';
+import 'package:flutter_api_practice/screens/comments_screen.dart';
 import 'package:http/http.dart' as http;
 
 class UserScreen extends StatelessWidget {
@@ -32,6 +33,17 @@ class UserScreen extends StatelessWidget {
         title: Text('User Screen'),
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: ((context) => CommentsScreen())),
+              );
+            },
+            child: Icon(Icons.forward, color: Colors.white),
+          ),
+        ],
       ),
       body: Column(
         children: [
